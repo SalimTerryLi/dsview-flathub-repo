@@ -28,10 +28,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/facontidavide/PlotJuggler.git
-        tag: 3.7.1
-        commit: fb2bab446f63c726f85e71b155d9fcbeb5603dc1
-      - type: patch
-        path: patches/fix_no_plugin_header_cstdint_inc.patch    # fixed in main branch
+        tag: 3.8.4
+        commit: 54bd6836ca571bfadb68acaece19b94603e03f99
       - type: patch
         path: patches/fix_cmake_icon_install.patch
       - type: file
