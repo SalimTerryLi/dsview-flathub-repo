@@ -132,3 +132,13 @@ modules:
             config-opts:
               - -DCMAKE_BUILD_TYPE=RelWithDebInfo
               - -DCPPZMQ_BUILD_TESTS=OFF
+      - name: zcm
+        sources:
+          - type: git
+            url: https://github.com/ZeroCM/zcm.git
+            commit: ddb54671a1ca4364972a1a816d2bd3761baa3daf    # 20231222
+        buildsystem: simple
+        build-commands:
+          - ./waf configure --prefix=${FLATPAK_DEST} --use-elf
+          - ./waf build
+          - ./waf install
